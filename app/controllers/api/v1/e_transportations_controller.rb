@@ -7,7 +7,6 @@ module Api
           sensor_type: transportation_params[:sensor_type],
           owner_id: transportation_params[:owner_id]
         )
-        @transportation.valid?
 
         if @transportation.save
           @scooter = EScooter.create!(
