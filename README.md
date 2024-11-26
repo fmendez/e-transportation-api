@@ -1,24 +1,25 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### How to test API
 
-Things you may want to cover:
 
-* Ruby version
+Create a new e-transportation
 
-* System dependencies
+```bash
+curl -X POST http://localhost:3000/api/v1/e_transportations \
+  -H "Content-Type: application/json" \
+  -d '{
+    "e_transportation": {
+      "transportation_type": "e-Scooter",
+      "sensor_type": "GPS",
+      "owner_id": 1,
+      "in_zone": true
+    }
+  }'
+```
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Get all e-transportations
+```bash
+curl -X GET http://localhost:3000/api/v1/e_transportations \
+  -H "Content-Type: application/json"
+```
