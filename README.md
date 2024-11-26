@@ -23,3 +23,9 @@ Get all e-transportations
 curl -X GET http://localhost:3000/api/v1/e_transportations \
   -H "Content-Type: application/json"
 ```
+
+Get outside zone stats
+```bash
+curl -X GET http://localhost:3000/api/v1/outside_zone_stats \
+  -H "Content-Type: application/json"
+```
